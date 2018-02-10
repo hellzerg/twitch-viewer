@@ -12,8 +12,8 @@ namespace TwitchViewer
         /* DO NOT LEAVE THEM EMPTY */
 
         // Enter current version here
-        internal readonly static float Major = 1;
-        internal readonly static float Minor = 0;
+        internal readonly static float Major = 0;
+        internal readonly static float Minor = 1;
 
         /* END OF VERSION PROPERTIES */
 
