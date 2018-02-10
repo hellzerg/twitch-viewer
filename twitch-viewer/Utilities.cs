@@ -8,6 +8,7 @@ using System.IO.Compression;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using System.Net;
+using System.Diagnostics;
 
 namespace TwitchViewer
 {
@@ -21,7 +22,10 @@ namespace TwitchViewer
         static string _liveStreamerFile = Application.StartupPath + "\\LiveStreamer\\livestreamer.exe";
 
         static string _liveStreamerLink = @"https://github.com/chrippa/livestreamer/releases/download/v1.12.2/livestreamer-v1.12.2-win32.zip";
-        static string _vcRedist2008Link = @"https://download.microsoft.com/download/1/1/1/1116b75a-9ec3-481a-a3c8-1777b5381140/vcredist_x86.exe";
+        // static string _vcRedist2008Link = @"https://download.microsoft.com/download/1/1/1/1116b75a-9ec3-481a-a3c8-1777b5381140/vcredist_x86.exe";
+
+        static string _vlc32Link = @"https://get.videolan.org/vlc/3.0.0/win32/vlc-3.0.0-win32.exe";
+        static string _vlc64Link = @"https://get.videolan.org/vlc/3.0.0/win64/vlc-3.0.0-win64.exe";
 
         internal static bool IsVLCInstalled()
         {
@@ -93,6 +97,38 @@ namespace TwitchViewer
                     }
                     catch { }
                 }
+            }
+        }
+
+        internal static void DownloadVLC()
+        {
+            try
+            {
+                WebClient client = new WebClient();
+                client.Encoding = Encoding.UTF8;
+
+                if (Environment.Is64BitOperatingSystem)
+                {
+                    client.DownloadFile(_vlc64Link, Application.StartupPath + "\\vlc.exe");
+                }
+                else
+                {
+                    client.DownloadFile(_vlc32Link, Application.StartupPath + "\\vlc.exe");
+                }
+
+                Process.Start("vlc.exe /L=1033 /S");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                try
+                {
+                    File.Delete(Application.StartupPath + "\\vlc.exe");
+                }
+                catch { }
             }
         }
     }

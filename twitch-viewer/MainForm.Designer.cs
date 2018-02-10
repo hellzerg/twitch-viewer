@@ -29,53 +29,56 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDownloadLiveStreamer = new System.Windows.Forms.Button();
+            this.btnDownloadVLC = new System.Windows.Forms.Button();
             this.lblVlcStatus = new System.Windows.Forms.Label();
             this.lblLiveStreamerStatus = new System.Windows.Forms.Label();
             this.topPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblversion = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtChannel = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnWatch = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnUpdate
+            // btnDownloadLiveStreamer
             // 
-            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnUpdate.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
-            this.btnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(308, 121);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(195, 34);
-            this.btnUpdate.TabIndex = 82;
-            this.btnUpdate.Tag = "themeable";
-            this.btnUpdate.Text = "Download LiveStreamer";
-            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnDownloadLiveStreamer.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDownloadLiveStreamer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnDownloadLiveStreamer.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnDownloadLiveStreamer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnDownloadLiveStreamer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnDownloadLiveStreamer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownloadLiveStreamer.ForeColor = System.Drawing.Color.White;
+            this.btnDownloadLiveStreamer.Location = new System.Drawing.Point(13, 203);
+            this.btnDownloadLiveStreamer.Name = "btnDownloadLiveStreamer";
+            this.btnDownloadLiveStreamer.Size = new System.Drawing.Size(195, 34);
+            this.btnDownloadLiveStreamer.TabIndex = 82;
+            this.btnDownloadLiveStreamer.Tag = "themeable";
+            this.btnDownloadLiveStreamer.Text = "Download LiveStreamer";
+            this.btnDownloadLiveStreamer.UseVisualStyleBackColor = false;
+            this.btnDownloadLiveStreamer.Click += new System.EventHandler(this.btnDownloadLiveStreamer_Click);
             // 
-            // button1
+            // btnDownloadVLC
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(13, 121);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 34);
-            this.button1.TabIndex = 83;
-            this.button1.Tag = "themeable";
-            this.button1.Text = "Download VLC";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnDownloadVLC.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDownloadVLC.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnDownloadVLC.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnDownloadVLC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnDownloadVLC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnDownloadVLC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownloadVLC.ForeColor = System.Drawing.Color.White;
+            this.btnDownloadVLC.Location = new System.Drawing.Point(13, 121);
+            this.btnDownloadVLC.Name = "btnDownloadVLC";
+            this.btnDownloadVLC.Size = new System.Drawing.Size(195, 34);
+            this.btnDownloadVLC.TabIndex = 83;
+            this.btnDownloadVLC.Tag = "themeable";
+            this.btnDownloadVLC.Text = "Download VLC";
+            this.btnDownloadVLC.UseVisualStyleBackColor = false;
+            this.btnDownloadVLC.Click += new System.EventHandler(this.btnDownloadVLC_Click);
             // 
             // lblVlcStatus
             // 
@@ -93,7 +96,7 @@
             this.lblLiveStreamerStatus.AutoSize = true;
             this.lblLiveStreamerStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLiveStreamerStatus.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblLiveStreamerStatus.Location = new System.Drawing.Point(303, 90);
+            this.lblLiveStreamerStatus.Location = new System.Drawing.Point(8, 172);
             this.lblLiveStreamerStatus.Name = "lblLiveStreamerStatus";
             this.lblLiveStreamerStatus.Size = new System.Drawing.Size(129, 28);
             this.lblLiveStreamerStatus.TabIndex = 85;
@@ -109,7 +112,7 @@
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(626, 77);
+            this.topPanel.Size = new System.Drawing.Size(769, 77);
             this.topPanel.TabIndex = 86;
             // 
             // pictureBox1
@@ -147,17 +150,60 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Twitch Viewer";
             // 
+            // txtChannel
+            // 
+            this.txtChannel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.txtChannel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtChannel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChannel.ForeColor = System.Drawing.Color.White;
+            this.txtChannel.Location = new System.Drawing.Point(13, 302);
+            this.txtChannel.Name = "txtChannel";
+            this.txtChannel.Size = new System.Drawing.Size(370, 34);
+            this.txtChannel.TabIndex = 87;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(8, 271);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(152, 28);
+            this.label1.TabIndex = 88;
+            this.label1.Text = "Twitch channel:";
+            // 
+            // btnWatch
+            // 
+            this.btnWatch.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnWatch.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnWatch.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnWatch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnWatch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
+            this.btnWatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWatch.ForeColor = System.Drawing.Color.White;
+            this.btnWatch.Location = new System.Drawing.Point(389, 302);
+            this.btnWatch.Name = "btnWatch";
+            this.btnWatch.Size = new System.Drawing.Size(141, 34);
+            this.btnWatch.TabIndex = 89;
+            this.btnWatch.Tag = "themeable";
+            this.btnWatch.Text = "Watch stream";
+            this.btnWatch.UseVisualStyleBackColor = false;
+            this.btnWatch.Click += new System.EventHandler(this.btnWatch_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.ClientSize = new System.Drawing.Size(626, 475);
+            this.ClientSize = new System.Drawing.Size(769, 556);
+            this.Controls.Add(this.btnWatch);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtChannel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.lblLiveStreamerStatus);
             this.Controls.Add(this.lblVlcStatus);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnDownloadVLC);
+            this.Controls.Add(this.btnDownloadLiveStreamer);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
@@ -174,14 +220,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDownloadLiveStreamer;
+        private System.Windows.Forms.Button btnDownloadVLC;
         private System.Windows.Forms.Label lblVlcStatus;
         private System.Windows.Forms.Label lblLiveStreamerStatus;
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblversion;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtChannel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnWatch;
     }
 }
 
